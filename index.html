@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cricket Score Card</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="score.js">
+    <link rel="stylesheet" href="script.js">
 </head>
 <body>
+    <div>
+        <input id="InputScore" type="text"> <button>Wide</button> <button>No Ball</button> <button>Out</button>
+    </div>
     <div class="scorecard">
         <div class="teamsName">
             PAK vs NZ
         </div>
         <div class="toss">Pakistan won the toss and elected to bat first</div>
         <div class="teamscore">PAKISTAN <br>
-        <div class="score" id="score">
-        0/0 <br>
+        <div class="score">
+            <span  id="score"></span>
+            <span>/</span> 
+            <span id="wickets">0</span> <br>
         <div class="overs">
         Overs: 0.0
         </div>
@@ -81,6 +86,6 @@
 
             
         
-    
+    <script src="script.js"></script>
 </body>
 </html>
