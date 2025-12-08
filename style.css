@@ -5,10 +5,43 @@
     box-sizing: border-box;
     font-family:'raleway', sans-serif;
 }
+.inpbuttons{
+    display: flex;
+    height: 60px;
+}
+input{
+    height: 30px;
+    width: 180px;
+    margin-top: 10px;
+    margin-left: 12px;
+    border: 2px solid rgb(20, 254, 59);
+     background-color: rgb(191, 193, 191);
+    color: white;
+    padding-left: 5px;
+    font-size: medium;
+    border-radius: 4px;
 
+
+    
+}
+.button{
+   
+    margin-top: 10px;
+    margin-left: 5px;
+}
+button{
+     border: 2px solid rgb(9, 241, 9);
+    height: 30px;
+    width: 60px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+
+}
 .scorecard{
-    height: 940px;
-    width: 400px;
+    height: 1050px;
+    width: 100%;
     border: 2px solid black;
    
 }
@@ -57,10 +90,16 @@
     font-size: 20px;
     font-weight: lighter;
 }
-.batsmen{
+.batbowl{
+    height: 159px;
     border: 1px solid black;
-    height: 150px;
+    display: flex;
     
+    
+}
+.batsmen{
+    
+    width: 300px;
     text-align: left;
     padding-top: 10px;
     font-size: 20px;
@@ -74,30 +113,44 @@
     text-align: right;
    
 }
-
-
-.bowler{
-    border: 1px solid black;
-    height: 83px;
+.Bowlers{
+    width: 270px;
     
-    text-align: left;
-    padding-top: 8px;
+    height: 150px;
+    margin-left: 600px;
+    padding-bottom: 50px;
+   
+}
+
+#bowler{
+    border: none;
+    margin-top: 3px;
+    height: 0px;
+    /* align-items: right;
+    text-align: right; */
+    padding-top: 0px;
+    padding-bottom: 2px;
     font-size: 20px;
 }
 .wordbowler{
     font-weight: bolder;
-    padding-bottom: 12px;
+    padding-bottom:40px ;
+    padding-top: 4px;
     font-size: 25px;
+   margin-top: 3px;
+    text-align: left;
+    border: none;
 }
 .both11{
     display: flex;
+    
     
 }
 .pak11{
     margin-top: 3px;
  border: 1px solid black;
  width: 50%;
- height: 388px;
+ height: 450px;
 }
 .pakname{
     border: 2px solid black;
@@ -115,7 +168,7 @@
     margin-top: 3px;
  border: 1px solid black;
  width: 50%;
- height: 388px;
+ height: 448px;
  
 }
 
@@ -134,7 +187,7 @@
 .players{
     border: 1px solid black;
     text-align: center;
-    font-size: 18px;
+    font-size: 23px;
     padding: 5px;
 
 }
