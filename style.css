@@ -6,12 +6,13 @@
     font-family:'raleway', sans-serif;
 }
 .inpbuttons{
-    
     height: 100px;
-  padding-left: 450px;
-
-
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+  
 }
+
 input{
     height: 30px;
     width: 180px;
