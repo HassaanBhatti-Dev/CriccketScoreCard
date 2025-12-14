@@ -10,3 +10,4 @@ ___________________________________________________________________
 | Hassaan   | Added Initial Logic               |      N/A (In Dev)
 | Waqar     | Added Functinality of Score adding|      N/A (In Dev)
 | Hassaan   | Added HTML and CSS                |      N/A (In Dev)
+| Hassaan   | Just mock Update                  |      N/A (In Dev)
