@@ -12,4 +12,4 @@ ________________________________________________________________________________
 | Hassaan   | Added HTML and CSS                         |      N/A (In Dev)    |  07-12-25
 | Hassaan   | Just mock Update                           |      N/A (In Dev)    |  12-12-25
 | Hassaan   | Added wide and No ball runs in scorecard   |      N/A (In Dev)    |  12-12-25
-
+| Hassaan   | Bring input and buttons at center          |      N/A (In Dev)    |  14-12-25       

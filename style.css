@@ -6,9 +6,13 @@
     font-family:'raleway', sans-serif;
 }
 .inpbuttons{
-    display: flex;
-    height: 60px;
+    height: 100px;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+  
 }
+
 input{
     height: 30px;
     width: 180px;
