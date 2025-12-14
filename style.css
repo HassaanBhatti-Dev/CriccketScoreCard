@@ -6,8 +6,11 @@
     font-family:'raleway', sans-serif;
 }
 .inpbuttons{
-    display: flex;
-    height: 60px;
+    
+    height: 100px;
+  padding-left: 450px;
+
+
 }
 input{
     height: 30px;
