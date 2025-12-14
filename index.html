@@ -14,7 +14,13 @@
             PAK vs NZ
         </div>
         <div class="toss">Pakistan won the toss and elected to bat first</div>
-        <div class="inpbuttons"> <input id="InputScore" type="number" > <div class="button"> <button>Wide</button> <button>No Ball</button> <button>Out</button></div></div>
+        <div class="inpbuttons"> <input id="InputScore"  > 
+            <div class="button"> 
+                <button class="extras-buttons" onclick="setWideBall()">Wide</button> 
+                <button class="extras-buttons" id="NoBall" onclick="setNoBall()">No Ball</button> 
+                <button>Out</button>
+            </div>
+        </div>
         <div class="teamscore">PAKISTAN <br>
         <div class="score">
             <span  id="score"></span>
