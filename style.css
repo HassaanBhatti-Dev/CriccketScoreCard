@@ -196,8 +196,9 @@ button{
 
 }
 
-.extras-buttons:focus {
-    border: 2px solid rgb(245, 245, 245);
+.extras-buttons.active {
+    border: 2px solid rgb(7, 7, 7);
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
+
