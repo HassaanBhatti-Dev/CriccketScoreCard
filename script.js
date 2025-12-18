@@ -18,6 +18,17 @@ function setNoBall(){
   noBallbtn.classList.add("active");
   // 🔹 counter reset
   inputCountAfternoBall = 0;
+
+  // ❌through this wide ball is Inactive
+  isWideball = false;
+  inputCountAfterWide = 0;
+  widebtn.classList.remove("active");
+
+  // ✅ Now no ball is active
+  isNoball = true;
+  inputCountAfterNoBall = 0;
+  noBallbtn.classList.add("active");
+
 }
 // Function to set isWideBall to true
 function setWideBall(){
@@ -26,6 +37,17 @@ function setWideBall(){
  widebtn.classList.add("active");
   // 🔹 counter reset
   inputCountAfterWide = 0;
+
+  
+   // ❌ through this no ball is Inactive
+  isNoball = false;
+  inputCountAfternoBall = 0;
+  noBallbtn.classList.remove("active");
+
+  // ✅  Now wide bal is active
+  isWideball = true;
+  inputCountAfterWide = 0;
+  widebtn.classList.add("active");
 }
 
 scoreDiv.innerHTML = Number(0);
@@ -71,28 +93,3 @@ scoreDiv.innerHTML =Number(scoreDiv.innerHTML) + Number(value) + Number(extraSco
     }
   }
 });
-
-function setNoBall() {
-  // ❌through this wide ball is Inactive
-  isWideball = false;
-  inputCountAfterWide = 0;
-  widebtn.classList.remove("active");
-
-  // ✅ Now no ball is active
-  isNoball = true;
-  inputCountAfterNoBall = 0;
-  noBallbtn.classList.add("active");
-}
-
-function setWideBall() {
-  // ❌ through this no ball is Inactive
-  isNoball = false;
-  inputCountAfternoBall = 0;
-  noBallbtn.classList.remove("active");
-
-  // ✅  Now wide bal is active
-  isWideball = true;
-  inputCountAfterWide = 0;
-  widebtn.classList.add("active");
-}
-
