@@ -202,3 +202,10 @@ button{
     color: rgb(0, 0, 0);
 }
 
+/* 
+  git branch -m MHB__Active-One-of-both-Buttons-at-a-time MHB__Active-One-of-both-Buttons-at-a-time
+  git fetch origin
+  git branch -u origin/MHB__Active-One-of-both-Buttons-at-a-time MHB__Active-One-of-both-Buttons-at-a-time
+  git remote set-head origin -a
+   */
+

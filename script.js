@@ -71,3 +71,28 @@ scoreDiv.innerHTML =Number(scoreDiv.innerHTML) + Number(value) + Number(extraSco
     }
   }
 });
+
+function setNoBall() {
+  // ❌through this wide ball is Inactive
+  isWideball = false;
+  inputCountAfterWide = 0;
+  widebtn.classList.remove("active");
+
+  // ✅ Now no ball is active
+  isNoball = true;
+  inputCountAfterNoBall = 0;
+  noBallbtn.classList.add("active");
+}
+
+function setWideBall() {
+  // ❌ through this no ball is Inactive
+  isNoball = false;
+  inputCountAfternoBall = 0;
+  noBallbtn.classList.remove("active");
+
+  // ✅  Now wide bal is active
+  isWideball = true;
+  inputCountAfterWide = 0;
+  widebtn.classList.add("active");
+}
+
