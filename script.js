@@ -10,61 +10,49 @@ const noBallbtn = document.getElementById("noBallbtn");
 
 // Variables will be used for adding Extras
 let isNoball = false;
-let isWideball  = false;
+let isWideball = false;
 
 // Function to set isNoBall to true
-function setNoBall(){
-  isNoball=true;
+function setNoBall() {
+  // ✅ Now no ball is active
+  isNoball = true;
   noBallbtn.classList.add("active");
-  // 🔹 counter reset
-  inputCountAfternoBall = 0;
+  // ❌through this wide ball is Inactive
+  isWideball = false;
+  widebtn.classList.remove("active");
 }
 // Function to set isWideBall to true
-function setWideBall(){
-  isWideball= true;
+function setWideBall() {
+  // Acivating Wide Ball Button
+  isWideball = true;
+  widebtn.classList.add("active");
 
- widebtn.classList.add("active");
-  // 🔹 counter reset
-  inputCountAfterWide = 0;
+  // ❌ through this no ball is Inactive
+  isNoball = false;
+  noBallbtn.classList.remove("active");
 }
 
 scoreDiv.innerHTML = Number(0);
 // When pressing Enter inside the input
-inputScore.addEventListener("keypress", function(event) {
+inputScore.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
-    if(Number(inputScore.value) < 7){
+    if (Number(inputScore.value) < 7) {
       const value = Number(inputScore.value); // get typed score
       let extraScore = 0;
 
-      if (isWideball && inputCountAfterWide === 0) {
-        extraScore += 1;
-      }
-
-      if (isNoball && inputCountAfternoBall === 0) {
-        extraScore += 1;
-      }
-
       if (isWideball) {
-        inputCountAfterWide++;
-        // ❗ doosri baar input par wide reset
-        if (inputCountAfterWide === 2) {
-          widebtn.classList.remove("active");
-          isWideball = false; // set default value
-          inputCountAfterWide = 0;
-        }
+        extraScore = 1;
+        widebtn.classList.remove("active");
+        isWideball = false; // set default value
       }
 
       if (isNoball) {
-        inputCountAfternoBall++;
-        // ❗ doosri baar input par noBall reset
-        if (inputCountAfternoBall === 2) {
-          noBallbtn.classList.remove("active");
-          isNoball = false; // set default value
-          inputCountAfternoBall = 0;
-        }
+        extraScore = 1;
+        noBallbtn.classList.remove("active");
+        isNoball = false; // set default value
       }
 
-scoreDiv.innerHTML =Number(scoreDiv.innerHTML) + Number(value) + Number(extraScore); // display it in #score after adding the previous score
+      scoreDiv.innerHTML = Number(scoreDiv.innerHTML) + Number(value) + Number(extraScore); // display it in #score after adding the previous score
       inputScore.value = ""; // clear input after enter
     } else {
       alert(`Can not add ${Number(inputScore.value)}`)
