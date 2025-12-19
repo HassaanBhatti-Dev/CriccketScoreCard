@@ -14,3 +14,5 @@ ________________________________________________________________________________
 | Hassaan   | Added wide and No ball runs in scorecard         |      N/A (In Dev)    |  12-12-25    
 | Hassaan   | Bring input and buttons at center                |      N/A (In Dev)    |  14-12-25    
 | Hassaan   | Retain Focused Button Until Scorecard is Updated |      N/A (In Dev)    |  16-12-25
+| Waqar     | Removed Unnecessary Codewith simple logic        |      N/A (In Dev)    |  19-12-25    
+| -----     | After adding to score board inactive button      |         ---          |     -    
