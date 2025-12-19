@@ -29,19 +29,40 @@ input{
     
 }
 .button{
-   
     margin-top: 10px;
     margin-left: 5px;
 }
 button{
      border: 2px solid rgb(9, 241, 9);
     height: 30px;
-    width: 60px;
+    width: 70px;
     background-color: black;
     color: white;
     font-weight: bold;
     font-size: medium;
 
+}
+.over-run-map-button{
+    border-radius: 100px;
+    border: 2px solid blue;
+    height: 30px;
+    max-width:40px;
+    width: 50px;
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+button.undo-button{
+    border-radius: 12px;
+     border: 2px solid red;
+    background-color: yellow;
+    color: red;
+    width: 80px;
+    margin-left: 10px;
 }
 .scorecard{
     height: 1050px;
@@ -196,9 +217,8 @@ button{
 
 }
 
-.extras-buttons.active {
-    border: 2px solid rgb(7, 7, 7);
+.extras-buttons:focus {
+    border: 2px solid rgb(245, 245, 245);
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
-

@@ -15,7 +15,8 @@
         </div>
         <div class="toss">Pakistan won the toss and elected to bat first</div>
          <div class="inpbuttons"> 
-            <input id="InputScore"> 
+            <input id="InputScore">                  
+            <button class="undo-button" onclick="undoLastScore()">Undo</button>
             <div class="button"> 
                 <button class="extras-buttons" id="widebtn" onclick="setWideBall()">Wide</button> 
                 <button class="extras-buttons" id="noBallbtn"  onclick="setNoBall()">No Ball</button> 
@@ -30,6 +31,9 @@
         <div class="overs">
         Overs: 0.0
         </div>
+        </div>
+        <div id="currentOverRuns">
+        Current Over: <span id="currentOverRunsDisplay"></span>
         </div>
         </div>
         <div class="batbowl">
