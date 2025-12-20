@@ -33,7 +33,7 @@ input{
     margin-left: 5px;
 }
 button{
-     border: 2px solid rgb(9, 241, 9);
+    border: 2px solid rgb(9, 241, 9);
     height: 30px;
     width: 70px;
     background-color: black;
@@ -44,7 +44,7 @@ button{
 }
 .over-run-map-button{
     border-radius: 100px;
-    border: 2px solid blue;
+    border: 2px solid green;
     height: 30px;
     max-width:40px;
     width: 50px;
@@ -56,9 +56,9 @@ button{
     vertical-align: middle;
 }
 
-button.undo-button{
+.undo-button{
     border-radius: 12px;
-     border: 2px solid red;
+    border: 2px solid red;
     background-color: yellow;
     color: red;
     width: 80px;
@@ -91,9 +91,7 @@ button.undo-button{
     color: white;
     /* font: size 8px ; */
     text-align: center;
-   
     padding: 10px;
-   
 }
 
 .teamscore{
@@ -217,8 +215,8 @@ button.undo-button{
 
 }
 
-.extras-buttons:focus {
-    border: 2px solid rgb(245, 245, 245);
+.extras-buttons.active {
+    border: 2px solid rgb(7, 7, 7);
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }

@@ -16,4 +16,5 @@ ________________________________________________________________________________
 | Hassaan   | Retain Focused Button Until Scorecard is Updated |      N/A (In Dev)    |  16-12-25
 | Waqar     | Removed Unnecessary Codewith simple logic        |      N/A (In Dev)    |  19-12-25    
 | -----     | After adding to score board inactive button      |         ---          |     -    
-| Waqar     | Over Map and Undo Button                         |      N/A (In Dev)    |  19-12-25    
+| Waqar     | Over Map and Undo Button, Static Over Maps       |      N/A (In Dev)    |  19-12-25    
+|           | populates score per ball                         |                      |              
