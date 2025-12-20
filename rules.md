@@ -17,6 +17,10 @@ example --> "issue/16: WAB -- added ChangeLog file to track history of changes a
 
 7. Update CHANGELOG , Address Issue in | Case | as issue/[Number]
 
+8. Update Version in meta version in <head> tag 
+
+9. Update Version in footer
+
 --------------------------------------------------------------------------
                             Coding Standards
 --------------------------------------------------------------------------

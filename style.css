@@ -101,7 +101,7 @@ button{
     
     
 }
-.batsmen{
+.active-batsmen{
     
     width: 300px;
     text-align: left;
@@ -150,13 +150,13 @@ button{
     
     
 }
-.pak11{
+.team-a{
     margin-top: 3px;
- border: 1px solid black;
- width: 50%;
- height: 450px;
+    border: 1px solid black;
+    width: 50%;
+    height: 450px;
 }
-.pakname{
+.team-a-name{
     border: 2px solid black;
     width: 100%;
     height: 28px;
@@ -168,7 +168,7 @@ button{
 
 }
 
-.nz11{
+.team-b{
     margin-top: 3px;
  border: 1px solid black;
  width: 50%;
@@ -177,7 +177,7 @@ button{
 }
 
 
-.nzname{
+.team-b-name{
     border: 2px solid black;
     width: 100%;
     height: 28px;
@@ -202,3 +202,21 @@ button{
     color: rgb(0, 0, 0);
 }
 
+.on-crease-batters{
+    border-radius: 54px;
+    font-weight: bold;
+    color: wheat;
+    background-color: green;
+    max-width: 50px;
+    display: inline-block;
+    width:40px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    font-size: small;
+    color: gray;
+}
