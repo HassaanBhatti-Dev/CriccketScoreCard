@@ -1,6 +1,5 @@
 // Getting the score from the InputScore element
 const score = document.getElementById("InputScore").innerText;
-
 // Inserting the score into the "score" div
 document.getElementById("score").innerHTML = `${score}`;
 const inputScore = document.getElementById("InputScore");
@@ -14,6 +13,8 @@ let isWideball = false;
 
 // Function to set isNoBall to true
 function setNoBall() {
+  console.log("no ball clicked");
+
   const toggleNoBallButton = noBallbtn.classList.contains("active");
 
   if (toggleNoBallButton) {
@@ -32,6 +33,7 @@ function setNoBall() {
 }
 // Function to set isWideBall to true
 function setWideBall() {
+  console.log("wide ball clicked");
   const toggleWideBallButton = widebtn.classList.contains("active");
 
   if (toggleWideBallButton) {
@@ -61,19 +63,38 @@ inputScore.addEventListener("keypress", function (event) {
       if (isWideball) {
         extraScore = 1;
         widebtn.classList.remove("active");
-        isWideball = false; // set default value
       }
 
       if (isNoball) {
         extraScore = 1;
         noBallbtn.classList.remove("active");
-        isNoball = false; // set default value
       }
 
       scoreDiv.innerHTML = Number(scoreDiv.innerHTML) + Number(value) + Number(extraScore); // display it in #score after adding the previous score
       inputScore.value = ""; // clear input after enter
+      const striker = document.querySelector("#striker-score");
+      striker.textContent = Number(striker.textContent) + (!isWideball ? value : 0);
+
+      if (value % 2 !== 0) {
+        toggleStriker();
+      }
+
+      isNoball = false; // set default value
+      isWideball = false; // set default value
+
     } else {
       alert(`Can not add ${Number(inputScore.value)}`)
     }
   }
 });
+
+function toggleStriker() {
+  const striker = document.querySelector("#striker-score");
+  const nonStriker = document.querySelector("#non-striker-score");
+  nonStriker.id = "striker-score";
+  striker.id = "non-striker-score";
+}
+
+// Since the file is used as type "module" in html Therefore We need Exposing functions to the global scope
+window.setNoBall = setNoBall;
+window.setWideBall = setWideBall;

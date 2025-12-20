@@ -15,3 +15,4 @@ ________________________________________________________________________________
 |             | Waqar     | Removed Unnecessary Codewith simple logic        |      Issue/7         |  19-12-25    
 |             | -----     | After adding to score board inactive button      |         ---          |     -    
 | 1.0.1       | Waqar     | Toggled the effect of NoBall and Wide Ball       |      Issue/16        |  20-12-25
+| 1.1.0       | Waqar     | Added Batters score when scorecard is updated    |      Issue/21        |  21-12-25
