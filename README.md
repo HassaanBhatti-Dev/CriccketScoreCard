@@ -18,3 +18,4 @@ ________________________________________________________________________________
 | -----     | After adding to score board inactive button      |         ---          |     -    
 | Waqar     | Over Map and Undo Button, Static Over Maps       |      N/A (In Dev)    |  19-12-25    
 |           | populates score per ball                         |                      |              
+| Waqar     | Toggled the effect of NoBall and Wide Ball       |      N/A (In Dev)    |  20-12-25

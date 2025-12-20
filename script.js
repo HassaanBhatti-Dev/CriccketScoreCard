@@ -17,16 +17,34 @@ let isWideball = false;
 
 // Function to set isNoBall to true
 function setNoBall() {
-  // ✅ Now no ball is active
+  const toggleNoBallButton = noBallbtn.classList.contains("active");
+
+  if (toggleNoBallButton) {
+    //  toggle No ball to Inactive
+    isNoball = false;
+    noBallbtn.classList.remove("active");
+
+    return;
+  }
+  //  Now no ball is active
   isNoball = true;
   noBallbtn.classList.add("active");
-  // ❌through this wide ball is Inactive
+  // through this wide ball is Inactive
   isWideball = false;
   widebtn.classList.remove("active");
 }
 // Function to set isWideBall to true
 function setWideBall() {
-  // Acivating Wide Ball Button
+  const toggleWideBallButton = widebtn.classList.contains("active");
+
+  if (toggleWideBallButton) {
+    //  toggle wide ball to Inactive
+    isWideball = false;
+    widebtn.classList.remove("active");
+
+    return;
+  }
+  // Activating Wide Ball Button
   isWideball = true;
   widebtn.classList.add("active");
 
