@@ -1,5 +1,6 @@
 // Getting the score from the InputScore element
 const score = document.getElementById("InputScore").innerText;
+// Inserting the score into the "score" div
 document.getElementById("score").innerHTML = `${score}`;
 const inputScore = document.getElementById("InputScore");
 const scoreDiv = document.getElementById("score");
@@ -17,6 +18,8 @@ let isWideball = false;
 
 // Function to set isNoBall to true
 function setNoBall() {
+  console.log("no ball clicked");
+
   const toggleNoBallButton = noBallbtn.classList.contains("active");
 
   if (toggleNoBallButton) {
@@ -35,6 +38,7 @@ function setNoBall() {
 }
 // Function to set isWideBall to true
 function setWideBall() {
+  console.log("wide ball clicked");
   const toggleWideBallButton = widebtn.classList.contains("active");
 
   if (toggleWideBallButton) {
@@ -85,6 +89,16 @@ inputScore.addEventListener("keypress", function (event) {
       undoStack.push({ score: Number(value) + Number(extraScore), isFairBall }); // pushing the new score to undo stack
       currentBallRuns = `${Number(value)}${extraScoreText}`; // pushing the new score to current over runs
       inputScore.value = ""; // clear input after enter
+      const striker = document.querySelector("#striker-score");
+      striker.textContent = Number(striker.textContent) + (!isWideball ? value : 0);
+
+      if (value % 2 !== 0) {
+        toggleStriker();
+      }
+
+      isNoball = false; // set default value
+      isWideball = false; // set default value
+
       const isOverFinished = fairBall === 6;
       attemptedBalls += 1;
 
@@ -95,6 +109,16 @@ inputScore.addEventListener("keypress", function (event) {
   }
 });
 
+function toggleStriker() {
+  const striker = document.querySelector("#striker-score");
+  const nonStriker = document.querySelector("#non-striker-score");
+  nonStriker.id = "striker-score";
+  striker.id = "non-striker-score";
+}
+
+// Since the file is used as type "module" in html Therefore We need Exposing functions to the global scope
+window.setNoBall = setNoBall;
+window.setWideBall = setWideBall;
 // Function to undo last added score
 function undoLastScore() {
   const lastScoreAdded = undoStack.pop(); // removing last score from stack

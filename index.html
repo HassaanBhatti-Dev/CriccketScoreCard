@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="version" content="1.1.0">
     <title>Cricket Score Card</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
 </head>
 <body>
   
@@ -67,14 +67,15 @@
         </div>
         </div>
         <div class="batbowl">
-        <div class="batsmen">
+        <div class="active-batsmen">
             <h1 class="wordbatsmen">
             Batsmen <br></h1><br>
 
-         <p>  Muhammad Rizwan 0(0)<br>
-          Babar Azam 0(0)</p> 
-                    
-        </div>
+         <p class="striker">  Muhammad Rizwan <span class="on-crease-batters" id="striker-score">0</span> (<span id="striker-balls">0</span>) </p>
+
+          <p class="non-striker">  Babar Azam <span class="on-crease-batters" id="non-striker-score">0</span> (<span id="non-striker-balls">0</span>)</p>
+        <br>
+    </div>
         
  <div class="Bowlers">
            <h1 class="wordbowler">
@@ -90,52 +91,49 @@
            
    
             <div class="both11">
-            <div class="pak11">
+            <div class="team-a">
                 
-                <div class="pakname">PAKISTAN 11:</div>
-                
-                  <div class="players">  Sahibzada Farhan <br></div>
-                   <div class="players"> Muhammad Rizwan <br></div>
-                   <div class="players"> Babar Azam (c)<br> </div>
-                  <div class="players">  Saim Ayub <br> </div>
-                   <div class="players"> Fakhar Zaman <br> </div>
-                   <div class="players"> Khuwaja Nafay <br> </div>
-                   <div class="players"> Muhammad Nawaz <br> </div>
-                   <div class="players"> Faheem Ashraf <br> </div>
-                  <div class="players">  Shaheen Afridi <br> </div>
-                   <div class="players"> Salman Mirza <br> </div>
-                   <div class="players"> Abrar Ahmed </div>
-
+                <div class="team-a-name">PAKISTAN 11:</div>
+                <div class="team-a-player-list">
+                  <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)   <br></div>
+                   <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>) <br></div>
+                   <div class="players"><span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                  <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                   <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                   <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                   <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>) <br> </div>
+                   <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                  <div class="players">  <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                   <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                   <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>) </div>
+                </div>
                 
                 </div>
 
-                 <div class="nz11">
+                 <div class="team-b">
                 
-                <div class="nzname">NEWZEALAND 11:</div>
-                
-                  <div class="players">  Devon Conway <br></div>
-                   <div class="players"> Rachin Ravindra<br></div>
-                   <div class="players"> Kane Willaimson (c)<br> </div>
-                  <div class="players">  Daryl Mitchell<br> </div>
-                   <div class="players"> Mark Champon <br> </div>
-                   <div class="players"> Glenn Phillips <br> </div>
-                   <div class="players"> Mitch Santner<br> </div>
-                   <div class="players"> Tom Latham <br> </div>
-                  <div class="players">  Tim Southee <br> </div>
-                   <div class="players"> Trent Boult <br> </div>
-                   <div class="players"> Ish Sodhii </div>
-
+                <div class="team-b-name">NEWZEALAND 11:</div>
+                <div class="team-b-player-list">
+                <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)   <br></div>
+                <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>) <br></div>
+                <div class="players"><span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>) <br> </div>
+                <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                <div class="players">  <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>)  <br> </div>
+                <div class="players"> <span class="player-name"></span><span class="score"></span>(<span class="ball-faced"></span>) </div>
+                </div>
                 
                 </div>
     </div>
-    </div>    
-            
-        
-
-            
-        
-    <script src="script.js"></script>
-    <!-- Below file will be used when code base gets larger  -->
-    <script src="helper.js"></script>
-</body>
+    </div>  
+        <script type="module" src="scripts/script.js"></script>
+        <script type="module" src="scripts/helper.js"></script>
+        <footer> 
+            <small>Version 1.1.0</small> 
+        </footer>
+    </body>
 </html>
