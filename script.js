@@ -6,6 +6,8 @@ const scoreDiv = document.getElementById("score");
 const widebtn = document.getElementById("widebtn");
 const noBallbtn = document.getElementById("noBallbtn");
 const overMapperDiv = document.getElementById("currentOverRuns");
+const totalOvers = document.getElementById("totalOvers");
+const everyOverBalls = document.getElementById("everyOver-balls");
 
 let resetTimeoutId; // declare globally or in a higher scope
 let fairBall = 0;
@@ -67,6 +69,15 @@ inputScore.addEventListener("keypress", function (event) {
         isFairBall = true;
       }
 
+      if(fairBall){
+        overs = 0
+        everyOverBalls.innerHTML = fairBall;
+        if(fairBall === 6){
+        overs++
+          totalOvers.innerHTML = overs++;
+        }
+        
+      }
       if (isWideball) {
         extraScore = 1;
         widebtn.classList.remove("active");
