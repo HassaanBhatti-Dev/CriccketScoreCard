@@ -6,8 +6,8 @@ const scoreDiv = document.getElementById("score");
 const widebtn = document.getElementById("widebtn");
 const noBallbtn = document.getElementById("noBallbtn");
 const overMapperDiv = document.getElementById("currentOverRuns");
-const totalOvers = document.getElementById("totalOvers");
-const everyOverBalls = document.getElementById("everyOver-balls");
+const totalOvers = document.getElementById("total-overs");
+const everyOverBalls = document.getElementById("every-over-balls");
 
 let resetTimeoutId; // declare globally or in a higher scope
 let fairBall = 0;
@@ -69,14 +69,13 @@ inputScore.addEventListener("keypress", function (event) {
         isFairBall = true;
       }
 
-      if(fairBall){
-        overs = 0
+      if (fairBall) {
         everyOverBalls.innerHTML = fairBall;
-        if(fairBall === 6){
-        overs++
-          totalOvers.innerHTML = overs++;
+        if (fairBall === 6) {
+          everyOverBalls.innerHTML = 0
+          totalOvers.innerHTML = Number(totalOvers.innerHTML) + 1;
         }
-        
+
       }
       if (isWideball) {
         extraScore = 1;
@@ -129,6 +128,7 @@ function undoLastScore() {
 
       if (lastScoreAdded.isFairBall && fairBall > 0) {
         fairBall -= 1; // reducing fair ball count by 1
+        everyOverBalls.innerHTML = fairBall;
       }
       attemptedBalls -= 1; // reducing attempted balls by 1
     }
@@ -139,23 +139,21 @@ function undoLastScore() {
 
 // Whenever score updates, this function will be called to render buttons 
 function renderButtons(isOverFinished, value) {
-
   // Select all spans with class "score-per-ball"
   const scoreSpans = document.querySelectorAll(".score-per-ball");
   scoreSpans[attemptedBalls - 1].textContent = value;
   const lastScoreAdded = undoStack[undoStack.length - 1];
 
   if (lastScoreAdded.isFairBall === false) {
-
     const spanWrapper = document.createElement("span");
-    spanWrapper.classList.add("currentOverRunsDisplay");
-    spanWrapper.classList.add("remove-after-over-finishes");
-
     let button = document.createElement("button");
+    let span = document.createElement("span");
+
+    span.classList.add("score-per-ball");
     button.classList.add("over-run-map-button");
 
-    let span = document.createElement("span");
-    span.classList.add("score-per-ball")
+    spanWrapper.classList.add("currentOverRunsDisplay");
+    spanWrapper.classList.add("remove-after-over-finishes");
 
     span.textContent = ''; // put the value inside span
     button.appendChild(span);
