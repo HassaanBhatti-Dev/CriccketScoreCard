@@ -17,3 +17,5 @@ ________________________________________________________________________________
 |  1.1.0      | Waqar     | Over Map and Undo Button, Static Over Maps       |      Issue/18        |  19-12-25    
 |             | populates score per ball                         |                      |              
 |  1.1.1      | Waqar     | Toggled the effect of NoBall and Wide Ball       |      Issue/16        |  20-12-25
+|  1.1.2      | Hassaan   | increment balls and over on fair ball            |      Issue/09        |  18-01-26
+|  1.1.2      | Hassaan   | Corrected code logic                             |      Issue/09        |  18-01-26
