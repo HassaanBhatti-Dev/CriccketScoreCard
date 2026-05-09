@@ -1,3 +1,4 @@
+
 1. Commit Message Pattern : 
 issue/[Number]: [AUTHOR] -- [updates]
 example --> "issue/16: WAB -- added ChangeLog file to track history of changes and address issue Number"
