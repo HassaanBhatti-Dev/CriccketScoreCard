@@ -8,15 +8,17 @@ const noBallbtn = document.getElementById("noBallbtn");
 const overMapperDiv = document.getElementById("currentOverRuns");
 const totalOvers = document.getElementById("total-overs");
 const everyOverBalls = document.getElementById("every-over-balls");
-
+const outballBtn = document.getElementById("outbtn");
+const wicketSpan = document.getElementById("wickets");
 let resetTimeoutId; // declare globally or in a higher scope
 let fairBall = 0;
-let attemptedBalls = 0
+let attemptedBalls = 0;
 let undoStack = [];
+let outs = 0;
 // Variables will be used for adding Extras
 let isNoball = false;
 let isWideball = false;
-
+let isOutball = false;
 // Function to set isNoBall to true
 function setNoBall() {
   const toggleNoBallButton = noBallbtn.classList.contains("active");
@@ -55,6 +57,24 @@ function setWideBall() {
   noBallbtn.classList.remove("active");
 }
 
+function out() {
+  const toggleOutBallBtn = outBtn.classList.contains("active");
+  if (toggleOutBallBtn) {
+    isOutBall = false;
+    outBtn.classList.remove("active");
+    return;
+  }
+  if (isNoball) {
+    isNoball = true;
+    return;
+  }
+
+  isOutBall = true;
+  outBtn.classList.add("active");
+  outs += 1;
+  wicketSpan.textContent = outs;
+}
+
 scoreDiv.innerHTML = Number(0);
 // When pressing Enter inside the input
 inputScore.addEventListener("keypress", function (event) {
@@ -63,6 +83,8 @@ inputScore.addEventListener("keypress", function (event) {
       const value = Number(inputScore.value); // get typed score
       let extraScore = 0;
       let extraScoreText = "";
+      let wickets = 0;
+      let wicketText = " "
       let isFairBall = false;
       if (!isWideball && !isNoball) {
         fairBall += 1;
@@ -90,10 +112,15 @@ inputScore.addEventListener("keypress", function (event) {
         extraScoreText = "(NB)";
         isNoball = false; // set default value
       }
-
+ if (isOutBall) {
+        wickets = 1;
+        outBtn.classList.remove("active");
+        wicketText = "+ W";
+        isOutBall = false;
+      }
       scoreDiv.innerHTML = Number(scoreDiv.innerHTML) + Number(value) + Number(extraScore); // display it in #score after adding the previous score
       undoStack.push({ score: Number(value) + Number(extraScore), isFairBall }); // pushing the new score to undo stack
-      currentBallRuns = `${Number(value)}${extraScoreText}`; // pushing the new score to current over runs
+      currentBallRuns = `${Number(value)}${extraScoreText}${wicketText}`; // pushing the new score to current over runs
       inputScore.value = ""; // clear input after enter
       const isOverFinished = fairBall === 6;
       attemptedBalls += 1;
