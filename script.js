@@ -18,7 +18,7 @@ let outs = 0;
 // Variables will be used for adding Extras
 let isNoball = false;
 let isWideball = false;
-let isOutball = false;
+let isOutBall = false;
 // Function to set isNoBall to true
 function setNoBall() {
   const toggleNoBallButton = noBallbtn.classList.contains("active");
