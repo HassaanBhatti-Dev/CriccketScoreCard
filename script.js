@@ -57,7 +57,7 @@ function setWideBall() {
   noBallbtn.classList.remove("active");
 }
 
-function out() {
+function wicketBtnClicked() {
   const toggleOutBallBtn = outBtn.classList.contains("active");
   if (toggleOutBallBtn) {
     isOutBall = false;
@@ -65,7 +65,6 @@ function out() {
     return;
   }
   if (isNoball) {
-    isNoball = true;
     return;
   }
 
@@ -84,7 +83,7 @@ inputScore.addEventListener("keypress", function (event) {
       let extraScore = 0;
       let extraScoreText = "";
       let wickets = 0;
-      let wicketText = " "
+      let wicketText = " ";
       let isFairBall = false;
       if (!isWideball && !isNoball) {
         fairBall += 1;
@@ -94,10 +93,9 @@ inputScore.addEventListener("keypress", function (event) {
       if (fairBall) {
         everyOverBalls.innerHTML = fairBall;
         if (fairBall === 6) {
-          everyOverBalls.innerHTML = 0
+          everyOverBalls.innerHTML = 0;
           totalOvers.innerHTML = Number(totalOvers.innerHTML) + 1;
         }
-
       }
       if (isWideball) {
         extraScore = 1;
@@ -112,13 +110,14 @@ inputScore.addEventListener("keypress", function (event) {
         extraScoreText = "(NB)";
         isNoball = false; // set default value
       }
- if (isOutBall) {
+      if (isOutBall) {
         wickets = 1;
         outBtn.classList.remove("active");
         wicketText = "+ W";
         isOutBall = false;
       }
-      scoreDiv.innerHTML = Number(scoreDiv.innerHTML) + Number(value) + Number(extraScore); // display it in #score after adding the previous score
+      scoreDiv.innerHTML =
+        Number(scoreDiv.innerHTML) + Number(value) + Number(extraScore); // display it in #score after adding the previous score
       undoStack.push({ score: Number(value) + Number(extraScore), isFairBall }); // pushing the new score to undo stack
       currentBallRuns = `${Number(value)}${extraScoreText}${wicketText}`; // pushing the new score to current over runs
       inputScore.value = ""; // clear input after enter
@@ -127,7 +126,7 @@ inputScore.addEventListener("keypress", function (event) {
 
       renderButtons(isOverFinished, currentBallRuns); // render buttons for current over
     } else {
-      alert(`Can not add ${inputScore.value}`)
+      alert(`Can not add ${inputScore.value}`);
     }
   }
 });
@@ -137,11 +136,10 @@ function undoLastScore() {
   const lastScoreAdded = undoStack.pop(); // removing last score from stack
   const scoreSpans = document.querySelectorAll(".score-per-ball");
   const isOverMapEmpty = Array.from(scoreSpans).every(
-    element => element.textContent.trim() === ''
+    (element) => element.textContent.trim() === "",
   );
 
   if (!isOverMapEmpty) {
-
     if (fairBall === 0) {
       fairBall = 6; // if over was finished, set fair ball to 6
       clearTimeout(resetTimeoutId); // clear timeout if over was finished
@@ -151,7 +149,7 @@ function undoLastScore() {
       const currentScore = Number(scoreDiv.innerHTML);
       const newScore = currentScore - lastScoreAdded.score;
       scoreDiv.innerHTML = newScore;
-      scoreSpans[attemptedBalls - 1].textContent = '';
+      scoreSpans[attemptedBalls - 1].textContent = "";
 
       if (lastScoreAdded.isFairBall && fairBall > 0) {
         fairBall -= 1; // reducing fair ball count by 1
@@ -164,7 +162,7 @@ function undoLastScore() {
   }
 }
 
-// Whenever score updates, this function will be called to render buttons 
+// Whenever score updates, this function will be called to render buttons
 function renderButtons(isOverFinished, value) {
   // Select all spans with class "score-per-ball"
   const scoreSpans = document.querySelectorAll(".score-per-ball");
@@ -182,7 +180,7 @@ function renderButtons(isOverFinished, value) {
     spanWrapper.classList.add("currentOverRunsDisplay");
     spanWrapper.classList.add("remove-after-over-finishes");
 
-    span.textContent = ''; // put the value inside span
+    span.textContent = ""; // put the value inside span
     button.appendChild(span);
     spanWrapper.appendChild(button);
 
@@ -192,16 +190,17 @@ function renderButtons(isOverFinished, value) {
 
   if (isOverFinished) {
     fairBall = 0; // reset fair ball count for new over
-    const spansToRemove = document.querySelectorAll(".remove-after-over-finishes");
+    const spansToRemove = document.querySelectorAll(
+      ".remove-after-over-finishes",
+    );
     // Loop through and assign values
     resetTimeoutId = setTimeout(() => {
       scoreSpans.forEach((run, index) => {
         attemptedBalls = 0;
 
         if (scoreSpans[index]) {
-          scoreSpans[index].textContent = '';
-          spansToRemove.forEach(span => span.remove());
-
+          scoreSpans[index].textContent = "";
+          spansToRemove.forEach((span) => span.remove());
         }
       });
     }, 2000);

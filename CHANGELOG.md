@@ -19,3 +19,4 @@ ________________________________________________________________________________
 |  1.1.1      | Waqar     | Toggled the effect of NoBall and Wide Ball       |      Issue/16        |  20-12-25
 |  1.1.2      | Hassaan   | increment balls and over on fair ball            |      Issue/09        |  18-01-26
 |  1.1.2      | Hassaan   | Corrected code logic                             |      Issue/09        |  18-01-26
+|  1.1.3      | Hassaan   | Wicket Functionality added                       |      Issue/25        |  18-05-26

@@ -1,229 +1,205 @@
-*{
-   
-    margin: 0;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family:'raleway', sans-serif;
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "raleway", sans-serif;
 }
-.inpbuttons{
-    height: 100px;
-    width: 100%;
-    font-size: 30px;
-    text-align: center;
-  
+.inpbuttons {
+  height: 100px;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
 }
 
-input{
-    height: 30px;
-    width: 180px;
-    margin-top: 10px;
-    margin-left: 12px;
-    border: 2px solid rgb(20, 254, 59);
-     background-color: rgb(191, 193, 191);
-    color: white;
-    padding-left: 5px;
-    font-size: medium;
-    border-radius: 4px;
-
-
-    
+input {
+  height: 30px;
+  width: 180px;
+  margin-top: 10px;
+  margin-left: 12px;
+  border: 2px solid rgb(20, 254, 59);
+  background-color: rgb(191, 193, 191);
+  color: white;
+  padding-left: 5px;
+  font-size: medium;
+  border-radius: 4px;
 }
-.button{
-    margin-top: 10px;
-    margin-left: 5px;
+.button {
+  margin-top: 10px;
+  margin-left: 5px;
 }
-button{
-    border: 2px solid rgb(9, 241, 9);
-    height: 30px;
-    width: 70px;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    font-size: medium;
-
+button {
+  border: 2px solid rgb(9, 241, 9);
+  height: 30px;
+  width: 70px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: medium;
 }
-.over-run-map-button{
-    border-radius: 100px;
-    border: 2px solid green;
-    height: 40px;
-    max-width:40px;
-    width: 50px;
-    background-color: lightgray;
-    color: black;
-    font-weight: bold;
-    font-size: 14px;
-    margin-right: 5px;
-    vertical-align: middle;
+.over-run-map-button {
+  border-radius: 100px;
+  border: 2px solid green;
+  height: 40px;
+  max-width: 40px;
+  width: 50px;
+  background-color: lightgray;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
-.undo-button{
-    border-radius: 12px;
-    border: 2px solid red;
-    background-color: yellow;
-    color: red;
-    width: 80px;
-    margin-left: 10px;
+.undo-button {
+  border-radius: 12px;
+  border: 2px solid red;
+  background-color: yellow;
+  color: red;
+  width: 80px;
+  margin-left: 10px;
 }
-.scorecard{
-    height: 1050px;
-    width: 100%;
-    border: 2px solid black;
-   
+.scorecard {
+  height: 1050px;
+  width: 100%;
+  border: 2px solid black;
 }
-.teamsName{
-    height: 70px;
-    width: 100%;
-    background-color: green;
-    border: none;
-    color: white;
-    font-size: 30px;
-    font-weight: bolder;
-    text-align: center;
+.teamsName {
+  height: 70px;
+  width: 100%;
+  background-color: green;
+  border: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
   padding-top: 20px;
-  
-
 }
-.toss{
-    width: 100%;
-    height: 40px;
-    background-color: rgb(47, 48, 47);
-    border: none;
-    color: white;
-    /* font: size 8px ; */
-    text-align: center;
-    padding: 10px;
+.toss {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(47, 48, 47);
+  border: none;
+  color: white;
+  /* font: size 8px ; */
+  text-align: center;
+  padding: 10px;
 }
 
-.teamscore{
-    border: 1px solid black;
-    height: 200px;
-    font-size: 35px;
-    text-align: center;
-    font-weight: bolder;
-    padding-top: 20px;
-    color: green;
-    
+.teamscore {
+  border: 1px solid black;
+  height: 200px;
+  font-size: 35px;
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 20px;
+  color: green;
+}
+.score {
+  color: black;
+  font-size: 45px;
+}
+.overs {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.batbowl {
+  height: 159px;
+  border: 1px solid black;
+  display: flex;
+}
+.batsmen {
+  width: 300px;
+  text-align: left;
+  padding-top: 10px;
+  font-size: 20px;
+}
+.wordbatsmen {
+  font-weight: bolder;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+.scoreball {
+  text-align: right;
+}
+.Bowlers {
+  width: 270px;
 
-}
-.score{
-    color: black;
-    font-size: 45px;
-}
-.overs{
-    font-size: 20px;
-    font-weight: lighter;
-}
-.batbowl{
-    height: 159px;
-    border: 1px solid black;
-    display: flex;
-    
-    
-}
-.batsmen{
-    
-    width: 300px;
-    text-align: left;
-    padding-top: 10px;
-    font-size: 20px;
-}
-.wordbatsmen{
-    font-weight: bolder;
-    padding-bottom: 20px;
-    font-size: 25px;
-}
-.scoreball{
-    text-align: right;
-   
-}
-.Bowlers{
-    width: 270px;
-    
-    height: 150px;
-    margin-left: 600px;
-    padding-bottom: 50px;
-   
+  height: 150px;
+  margin-left: 600px;
+  padding-bottom: 50px;
 }
 
-#bowler{
-    border: none;
-    margin-top: 3px;
-    height: 0px;
-    /* align-items: right;
+#bowler {
+  border: none;
+  margin-top: 3px;
+  height: 0px;
+  /* align-items: right;
     text-align: right; */
-    padding-top: 0px;
-    padding-bottom: 2px;
-    font-size: 20px;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  font-size: 20px;
 }
-.wordbowler{
-    font-weight: bolder;
-    padding-bottom:40px ;
-    padding-top: 4px;
-    font-size: 25px;
-   margin-top: 3px;
-    text-align: left;
-    border: none;
+.wordbowler {
+  font-weight: bolder;
+  padding-bottom: 40px;
+  padding-top: 4px;
+  font-size: 25px;
+  margin-top: 3px;
+  text-align: left;
+  border: none;
 }
-.both11{
-    display: flex;
-    
-    
+.both11 {
+  display: flex;
 }
-.pak11{
-    margin-top: 3px;
- border: 1px solid black;
- width: 50%;
- height: 450px;
+.pak11 {
+  margin-top: 3px;
+  border: 1px solid black;
+  width: 50%;
+  height: 450px;
 }
-.pakname{
-    border: 2px solid black;
-    width: 100%;
-    height: 28px;
-    color: white;
-    background-color: green;
-    text-align: center;
-    padding-top: 4px;
-    font-weight: bold;
-
+.pakname {
+  border: 2px solid black;
+  width: 100%;
+  height: 28px;
+  color: white;
+  background-color: green;
+  text-align: center;
+  padding-top: 4px;
+  font-weight: bold;
 }
 
-.nz11{
-    margin-top: 3px;
- border: 1px solid black;
- width: 50%;
- height: 448px;
- 
+.nz11 {
+  margin-top: 3px;
+  border: 1px solid black;
+  width: 50%;
+  height: 448px;
 }
 
-
-.nzname{
-    border: 2px solid black;
-    width: 100%;
-    height: 28px;
-    color: white;
-    background-color: rgb(7, 7, 7);
-    text-align: center;
-    padding-top: 4px;
-    font-weight: bold;
-
+.nzname {
+  border: 2px solid black;
+  width: 100%;
+  height: 28px;
+  color: white;
+  background-color: rgb(7, 7, 7);
+  text-align: center;
+  padding-top: 4px;
+  font-weight: bold;
 }
-.players{
-    border: 1px solid black;
-    text-align: center;
-    font-size: 23px;
-    padding: 5px;
-
+.players {
+  border: 1px solid black;
+  text-align: center;
+  font-size: 23px;
+  padding: 5px;
 }
 
 .extras-buttons.active {
-    border: 2px solid rgb(7, 7, 7);
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+  border: 2px solid rgb(7, 7, 7);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
-#outBtn.active{
-     border: 2px solid rgb(7, 7, 7);
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+#outBtn.active {
+  border: 2px solid rgb(7, 7, 7);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
-
